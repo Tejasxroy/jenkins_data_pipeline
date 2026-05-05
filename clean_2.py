@@ -3,15 +3,15 @@ import warnings
 
 warnings.filterwarnings("ignore")
 
-print("🚀 Starting Data Cleaning Process...")
+print("Starting Data Cleaning Process...")
 
 # Load dataset (same folder as script)
 df = pd.read_csv("Messy_Employee_dataset.csv")
 
-print("\n📊 Initial Data Info:")
+print("\n Initial Data Info:")
 print(df.info())
 
-print("\n🔍 Missing Values:")
+print("\n Missing Values:")
 print(df.isnull().sum())
 
 # Fill missing values
@@ -43,4 +43,4 @@ df['Phone'] = df['Phone'].astype(str).str.replace('-', '')
 # Save output
 df.to_csv("cleaned_employee_data.csv", index=False)
 
-print("\n✅ Data Cleaning Completed Successfully!")
+print("\n Data Cleaning Completed Successfully!")
